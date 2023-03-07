@@ -46,11 +46,10 @@ def filter_request():
 
 @app.errorhandler(401)
 def unauthorized(error) -> str:
-    
     """unauthorized request handler
     
     Args:
-        error (error)':' error object
+        error (error): error object
     """
     return jsonify({'error': 'Unauthorized'}), 401
 
@@ -61,7 +60,7 @@ def forbidden(error) -> str:
     but not allowed to access a resource
     
     Args:
-        error (error)':' 403 forbidden
+        error (error): 403 forbidden
         
     Returns:
         str: status message and code
